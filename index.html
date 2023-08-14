@@ -5,15 +5,18 @@
 	<link rel="icon" href="https://raw.githubusercontent.com/Epicminer256/Securascramble/main/IMG/favicon.ico">
     <style type="text/css">
         body {
-            background-image: url('https://github.com/Epicminer256/Securascramble/blob/main/IMG/background.gif?raw=true');
-            background-size: contain;
             color: #000;
             font-family: 'Roboto', monospace;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
+        }
+        #cow{
+            display: block;
+            background-image: url("https://github.com/Epicminer256/Securascramble/blob/main/IMG/background.gif?raw=true");
             background-position: center;
-            color: #000;
-            font-family: 'Roboto', monospace;
+            background-repeat: no-repeat;
+            width: 100%;
+            height: 280px;
+            font-size: 0px;
+            
         }
 
         header {
@@ -38,50 +41,21 @@
             padding: 20px;
             text-align: center;
         }
-        .button {
-            position: relative;
-            width: 230px;
-            height: 47px;
-            border: 1px solid rgb(5, 39, 162);
-            color: rgb(10, 16, 214);
-            background: rgba(0, 0, 0, 0.08);
-            border-radius: 6px;
-            margin: 20px auto;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 24px;
-            user-select: none;
-                font-weight: 500;
-        }
-
-        .button:active {
-            background: rgb(255, 255, 255);
-        }
-
-        .button-text {
-            opacity: 0;
-            user-select: none;
-            position: absolute;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
+        .center{
+            text-align: center;
         }
     </style>
 <body>
     <header>
         <h1>The place where Securly comes to die</h1>
     </header>
-    <p>Drag Bookmarklet Below To Bookmarks Bar</p>
-    <div class="button">
-        Kill Securly
-        <a onclick="event.preventDefault();alert('Drag and drop me to you bookmark bar, don\'t click me!')" href="javascript:fetch('https://raw.githubusercontent.com/Epicminer256/Securascramble/main/kill.js').then(r => r.text()).then(r => eval(r))" class="button-text">
+    <p>Drag this cow to your bookmarkbar (Use Ctrl+Shift+B to show/hide bookmarkbar)</p>
+    
+    <a onclick="event.preventDefault();alert('Drag and drop me to you bookmark bar, don\'t click me!')" href="javascript:fetch('https://raw.githubusercontent.com/Epicminer256/Securascramble/main/kill.js').then(r => r.text()).then(r => eval(r))">
+        <div id="cow">
             Securascramble
-        </a>
-    </div>
+        </div>
+    </a>
             
    
 </body>

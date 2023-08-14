@@ -47,7 +47,7 @@ if (window.location.href.indexOf("securly") > -1) {
         for(let r = 0; r < 99; r++) {
           document.cookie = `cd${r}=${encodeURIComponent(btoa(String.fromCharCode.apply(0, crypto.getRandomValues(new Uint8Array(o))))).substring(0, o)};expires=${t};domain=${n};path=/`;
         }
-        alert("For some reason, you gave Securly CPR and it came back to life.");
+        alert("Revived Securly.");
         this.style.backgroundColor = "red";
         this.textContent = "OFF";
       }
@@ -55,6 +55,8 @@ if (window.location.href.indexOf("securly") > -1) {
     
     coverIframe.contentDocument.body.appendChild(toggleButton);
     } else {
-    alert("you gotta be on securly.com");
-    
+        if(confirm("This script needs to be on securly.com to work, do you want to goto securly to kill it?")){
+            alert("When you get redirected, launch the script")
+            window.location.href="https://www.securly.com/";
+        }
     }

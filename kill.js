@@ -1,6 +1,7 @@
 // go to bookmarklets, thats whatcha want
 if (window.location.href.indexOf("securly") > -1) {
     document.write("<html><head></head><body></body></html>")
+    window.stop()
     
     
     const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick, button.slick-prev.slick-arrow, button.slick-next.slick-arrow.slick-disabled");

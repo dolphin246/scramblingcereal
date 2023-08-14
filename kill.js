@@ -1,11 +1,6 @@
 // go to bookmarklets, thats whatcha want
 if (window.location.href.indexOf("securly") > -1) {
-    const elementsToRemove = document.querySelectorAll("div.head-top, div.wonderbar");
-    
-    
-    elementsToRemove.forEach(function(element) {
-      element.remove();
-    });
+    document.write("<html><head></head><body></body></html>")
     
     
     const buttonsToRemove = document.querySelectorAll("button.slick-prev.slick-arrow.slick-disabled, button.slick-next.slick-arrow.slick, button.slick-prev.slick-arrow, button.slick-next.slick-arrow.slick-disabled");

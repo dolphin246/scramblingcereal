@@ -1,31 +1,29 @@
 // Define the CSS styles as a string
 const css = `
-  .draggable {
-    position: fixed;
-    z-index: 9;
-    background-color: white;
-    border: 1px solid #ddd;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    border-radius: 10px; /* Sets the border radius to 10px */
-    top: 0;
-    left: 0;
-    transform: translate(0, 0);
-  }
+    .KillDraggable {
+        position: fixed;
+        z-index: 99999;
+        background-color: white;
+        border: 1px solid #ddd;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+        width: 320px;
+        height: 140px;
+        border-radius: 10px;
+        top: 0;
+        left: 0;
+        transform: translate(0, 0);
+    }
 
-  button {
-    width: 100%;
-    height: 90%;
-    display: block;
-    margin: auto;
-    font-size: 8em;
-    color: red;
-    background-image: url('https://github.com/zek-c/about-blank-website/blob/main/Untitled%20design.png');
-    background-size: cover;
-    background-position: center;
-  }
+    button {
+        width: 300px;
+        height: 120px;
+        display: block;
+        margin: auto;
+        font-size: 8em;
+        color: white;
+        background-color: #f44336;
+    }
 `;
 
 // Create a new style element and append the CSS to it
@@ -35,7 +33,7 @@ document.head.appendChild(style);
 
 // Create a new div element to hold the GUI
 const gui = document.createElement('div');
-gui.classList.add('draggable');
+gui.classList.add('KillDraggable');
 document.body.appendChild(gui);
 
 // Create the "Kill" button and append it to the GUI
@@ -49,7 +47,7 @@ let pos1 = 0,
     pos3 = 0,
     pos4 = 0;
 
-button.addEventListener('mousedown', dragMouseDown);
+gui.addEventListener('mousedown', dragMouseDown);
 
 function dragMouseDown(event) {
   event = event || window.event;

@@ -1,0 +1,1 @@
+window.clusterStatus.HELLO = 0
